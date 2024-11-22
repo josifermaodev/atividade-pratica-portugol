@@ -3,11 +3,22 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro numeros[10]={2,5,1,3,4,9,7,8,10,6}
-
-
-		para(numeros[0] = 10; numeros[0] >= 1; numeros[0]--){
-			escreva(numeros[0], " ")
+		inteiro numeros[10]={2,5,1,3,4,9,7,8,10,6}
+		inteiro temp
+		
+		para(inteiro i=0; i<10; i++){
+			para(inteiro j=0; j<10-i-1; j++){
+				se (numeros[j]<numeros[j+1]){
+					temp=numeros[j]
+					numeros[j]=numeros[j+1]
+					numeros[j+1]=temp
+				}
+			}
+			
+		}
+		escreva("Ordem decrescente: ")
+		para (inteiro i=0; i<10; i++){
+			escreva(numeros[i]," ")
 		}
 	}
 }
